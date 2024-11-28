@@ -1,3 +1,5 @@
+package com.example.tarea2_6usodelasrestapisyerai;
+
 import java.util.ArrayList;
 
 public class LocationWeather
