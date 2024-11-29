@@ -1,4 +1,4 @@
-package com.example.tarea2_6usodelasrestapisyerai;
+package com.example.tarea2_6usodelasrestapisyerai.Modelos;
 
 import java.util.ArrayList;
 
