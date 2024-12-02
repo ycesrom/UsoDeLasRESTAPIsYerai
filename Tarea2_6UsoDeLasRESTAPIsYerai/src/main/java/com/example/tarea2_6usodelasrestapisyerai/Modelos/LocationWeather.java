@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class LocationWeather
 {
-    public class Current{
+    public static class Current{
 
         public String observation_time;
         public int temperature;
@@ -22,6 +22,16 @@ public class LocationWeather
         public int uv_index;
         public int visibility;
         public String is_day;
+
+        public Current(int humidity, int temperature, int weather_code, int pressure, int precip, int visibility, String is_day) {
+            this.humidity = humidity;
+            this.temperature = temperature;
+            this.weather_code = weather_code;
+            this.pressure = pressure;
+            this.precip = precip;
+            this.visibility = visibility;
+            this.is_day = is_day;
+        }
 
         public String getObservation_time() {
             return observation_time;
