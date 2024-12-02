@@ -5,7 +5,9 @@ import com.example.tarea2_6usodelasrestapisyerai.API.APIWeather;
 import com.example.tarea2_6usodelasrestapisyerai.Modelos.LocationWeather;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -17,7 +19,15 @@ import java.util.List;
 public class WeatherController {
     // Lista observable para almacenar los datos
     private ObservableList<LocationWeather> datos;
+    @FXML
+    private Button btnTiempo;
+    public void initialize(){
+        btnTiempo.setOnAction(e-> {
+    obtenerDatosRest("London");
 
+
+                    });
+    }
     // Método para obtener datos del clima
     public void obtenerDatosRest(String city) {
         // Crea el servicio de la API
@@ -26,6 +36,7 @@ public class WeatherController {
         // Llama al servicio para obtener los datos
         Call<LocationWeather> call = apiService.cargarDatosClimaticos();
         call.enqueue(new Callback<LocationWeather>() {
+
 
             @Override
             public void onResponse(Call<LocationWeather> call, Response<LocationWeather> response) {
