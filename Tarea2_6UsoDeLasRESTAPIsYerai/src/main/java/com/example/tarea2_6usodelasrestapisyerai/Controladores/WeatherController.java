@@ -29,7 +29,9 @@ public class WeatherController {
 
             @Override
             public void onResponse(Call<LocationWeather> call, Response<LocationWeather> response) {
-                System.out.println(response.code());
+            System.out.println("Respinse body"+response.body());
+            System.out.println("Respomnse code "+response.code());
+
                 if (response.isSuccessful()) {
                     // Si la respuesta es exitosa, se asignan los datos a la lista observable
                     List<LocationWeather> datosaux = Collections.singletonList(response.body());

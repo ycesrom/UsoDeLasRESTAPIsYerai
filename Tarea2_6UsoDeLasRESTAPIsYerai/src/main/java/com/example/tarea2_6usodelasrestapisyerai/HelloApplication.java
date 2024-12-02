@@ -25,10 +25,8 @@ public class HelloApplication extends Application {
 
 
             public static void main(String[] args) {
-                WeatherController weatherController = new WeatherController();
-                weatherController.obtenerDatosRest("London");
 
-
-
+            WeatherController controller = new WeatherController();
+            controller.obtenerDatosRest("London");
            launch();}
 }
